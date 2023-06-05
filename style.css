@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --paragraph:  hsl(218, 22%, 67%);
+    --body: hsl(204, 43%, 93%);
+    --box1: white;
+    --box3:  hsl(179, 62%, 43%);
+    --btn: hsl(71, 73%, 54%);
+    --box2: hsl(179, 61%, 42%);
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-color: var(--body);
+}
+
+/* first box styling */
+.main-box{
+    width: 700px;
+    /* height: 20px; */
+    /* border: 1px solid red; */
+    /* background-color: var(--box1); */
+}
+
+.one{
+    background-color: var(--box1);
+    padding: 30px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.one .p{
+    color: var(--btn);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.one h2{
+    color: var(--box2);
+    font-weight: 700;
+}
+
+.one p{
+    color: var(--paragraph);
+    padding-top: 12px;
+    word-spacing: 1px;
+}
+
+/* fleced box styling */
+
+.flex-box{
+    display: flex;
+}
+
+.two, .three{
+    padding: 30px;
+    flex: 50%;
+    /* border: 1px solid red; */
+}
+
+.two{
+    background-color: var(--box2);
+    border-radius: 0px 0px 0px 10px;
+    color: white;
+    text-align: left;
+}
+
+.two .price{
+    color: var(--body);
+    /* border: 1px solid red; */
+    align-items: center;
+    display: flex;
+}
+
+.two .price span{
+    font-size: 40px;
+    color: white;
+    font-weight: 600;
+    padding-right: 25px;
+}
+
+.btn{
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--btn);
+    color: var(--body);
+    box-shadow: black 1px 1px 1px;
+    cursor: pointer;
+}
+
+/* box3 styling */
+
+.three{
+     background-color: var(--box3);
+     border-radius: 0px 0px 10px 0px;
+     text-align: left;
+}
+.three p{
+    color: var(--body);
+    font-size: 16px;
+    word-spacing: 1px;
+    padding-top: 10px;
+}
+
+.three h3{
+    color: white;
+    font-weight: 600;
+}
+
+
+/* mobile version */
+
+@media screen and (max-width: 800px) {
+
+    body{
+        width: 100vw;
+        height: 100vh;
+    }
+    .flex-box{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .three{
+        border-radius: 0px 0px 10px 10px;
+        text-align: left;
+        padding-right: 90px;
+    }
+
+    .two{
+        border-radius: 0px 0px 0px 0px;
+        text-align: left;
+    }
+    
+    .main-box{
+        width: 280px;
+        padding-top: 200px;
+        /* padding-bottom: 200px; */
+    }
+}
